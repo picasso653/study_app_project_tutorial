@@ -8,6 +8,7 @@ class DataUploader extends GetxController {
   }
 
   void uploadData() {
+    print('Data is uploading');
     // ignore: todo
     // TODO: implement uploadData
   }
