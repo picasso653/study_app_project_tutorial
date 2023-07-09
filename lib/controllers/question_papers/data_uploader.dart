@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class DataUploader extends GetxController {
@@ -8,8 +9,6 @@ class DataUploader extends GetxController {
   }
 
   void uploadData() {
-    print('Data is uploading');
-    // ignore: todo
-    // TODO: implement uploadData
+    DefaultAssetBundle.of(Get.context!);
   }
 }
