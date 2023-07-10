@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
@@ -8,7 +10,13 @@ class DataUploader extends GetxController {
     super.onReady();
   }
 
-  void uploadData() {
-    DefaultAssetBundle.of(Get.context!);
+  Future<void> uploadData() async {
+    final manifestContent = await DefaultAssetBundle.of(Get.context!)
+        .loadString('AssetManifest.json');
+    final Map<String, dynamic> manifestMap = json.decode(manifestContent);
+    manifestMap.keys
+        .where((path) =>
+            path.startsWith('assets/DB/paper') && path.contains('.json'))
+        .toList();
   }
 }
