@@ -15,9 +15,10 @@ class DataUploader extends GetxController {
         .loadString('AssetManifest.json');
     final Map<String, dynamic> manifestMap = json.decode(manifestContent);
     // ignore: unused_local_variable
-    final papersInssets = manifestMap.keys
+    final papersInAssets = manifestMap.keys
         .where((path) =>
             path.startsWith('assets/DB/paper') && path.contains('.json'))
         .toList();
+    print(papersInAssets);
   }
 }
