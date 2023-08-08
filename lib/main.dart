@@ -8,6 +8,7 @@ import 'package:study_app_project_tutorial/data_uploader_screen.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp(options: DefalutFirebaseOptions.currentPlatform)
   runApp(GetMaterialApp(home: DataUploaderScreen()));
 }
-
